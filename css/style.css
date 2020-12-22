@@ -1,149 +1,206 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #nd-logo {
-    font-weight: bold;
-    color: #f95419;
-    font-size: 1.5rem;
+  font-weight: bold;
+  color: #f95419;
+  font-size: 1.5rem;
 }
 
 nav {
-    margin-left: 9%;
-    margin-right: 9%;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+.grid-container {
+  margin-top: 10vh;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-column-gap: 50px;
+  grid-row-gap: 10%;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+.item-1 {
+  font-family: "Poppins", sans-serif;
+  right: 0;
+  left: 0;
+}
+#item-2 {
+
 }
 
-#first-slide {
-    display: block;
-    position: relative;
-    margin-top: 11.2%;
-    font-family: 'Poppins', sans-serif;
+#item-3 {
+  grid-column: 1/3;
 }
-
 #first-slide-title {
-    font-size: 2.938rem;
+  font-size: 2.938rem;
 }
 
 .Download_on_the_App_Store_Badge_TR_wht_RGB_100217 {
-    width: 9.456rem;
-    height: 2.5rem;
-    margin: 2.5rem 1.294rem 0.625rem 0;
-    object-fit: contain;
+  width: 9.456rem;
+  height: 2.5rem;
+  margin: 2.5rem 1.294rem 0.625rem 0;
+  object-fit: contain;
 }
 
 .google-play-badge {
-    width: 9.688rem;
-    height: 3.75rem;
-    margin: 1.875rem 3.313rem 0 0;
-    object-fit: contain;
+  width: 9.688rem;
+  height: 3.75rem;
+  margin: 1.875rem 3.313rem 0 0;
+  object-fit: contain;
 }
 
 #first-slide-subtitle {
-    width: 20.313rem;
-    height: 3.625rem;
-    margin: 3.688rem 3.438rem 1.875rem 0;
-    font-family: Poppins;
-    font-size: 1.25rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: normal;
-    text-align: left;
-    color: #000000;
+  width: 20.313rem;
+  height: 3.625rem;
+  margin: 3.688rem 3.438rem 1.875rem 0;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
 }
 
 .scroll-down {
-    height: 50px;
-    width: 30px;
-    border: 2px solid black;
-    position: relative;
-    left: 50%;
-    bottom: 20px;
-    border-radius: 50px;
-    cursor: pointer;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 50px;
+  width: 30px;
+  border: 2px solid black;
+  position: relative;
+  left: 50%;
+  bottom: 20px;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .scroll-down::before,
 .scroll-down::after {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    height: 10px;
-    width: 10px;
-    transform: translate(-50%, -100%) rotate(45deg);
-    border: 2px solid black;
-    border-top: transparent;
-    border-left: transparent;
-    animation: scroll-down 1s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%, -100%) rotate(45deg);
+  border: 2px solid black;
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
 }
 
 .scroll-down::before {
-    top: 30%;
-    animation-delay: 0.3s;
-    /* animation: scroll-down 1s ease-in-out infinite; */
+  top: 30%;
+  animation-delay: 0.3s;
+  /* animation: scroll-down 1s ease-in-out infinite; */
 }
 
 @keyframes scroll-down {
-    0% {
-        /* top:20%; */
-        opacity: 0;
-    }
+  0% {
+    /* top:20%; */
+    opacity: 0;
+  }
 
-    30% {
-        opacity: 1;
-    }
+  30% {
+    opacity: 1;
+  }
 
-    60% {
-        opacity: 1;
-    }
+  60% {
+    opacity: 1;
+  }
 
-    100% {
-        top: 90%;
-        opacity: 0;
-    }
+  100% {
+    top: 90%;
+    opacity: 0;
+  }
 }
 
 #scroll-button {
-    position: relative;
-}
-
-.Samsung-Galaxy-S20-Utra-Cosmic-Black {
-    width: 15.972rem;
-    height: 31.25rem;
-    object-fit: contain;
+  position: relative;
 }
 
 .typewriter-text {
-    color:black;
+  color: black;
 }
 .icon-bar {
-    right: 0%;
-    position: fixed;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+  right: 0%;
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+#twitter,
+#instagram {
+  width: 30px;
+}
+
+#second-slide {
+  flex: row;
+}
+/*Extra-Small(xs) size in bootstrap*/
+@media (max-width: 575.98px) {
+  .icon-bar {
+    display: none;
   }
   
-  .icon-bar a {
-    display: block;
+  .item-1,
+  .item-2 {
+    grid-column: 1/3;
     text-align: center;
-    padding: 16px;
-    transition: all 0.3s ease;
-    color: white;
-    font-size: 20px;
   }
-  
-#twitter, #instagram{
-    width:30px;
+  .item-2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Small(sm) size in Bootstrap*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .icon-bar {
+    display: none;
+  }
+  .item-1,
+  .item-2 {
+    grid-column: 1/3;
+    text-align: center;
+  }
+  .item-2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*Medium(md) size in bootstrap*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/*Large(lg) size in Bootstrap*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/*Extra Large size in Bootstrap*/
+@media (min-width: 1200px) {
 }
