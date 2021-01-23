@@ -14,6 +14,36 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+/*SETTING  ITEM AREAS START*/
+.item-1 {
+  grid-area: item-1;
+}
+.item-2 {
+  grid-area: item-2;
+}
+.item-3,
+.scroll-down {
+  grid-area: item-3;
+}
+.item-4 {
+  grid-area: item-4;
+}
+.item-5 {
+  grid-area: item-5;
+}
+.item-6 {
+  grid-area: item-6;
+}
+.item-7 {
+  grid-area: item-7;
+}
+.item-8 {
+  grid-area: item-8;
+}
+.item-9 {
+  grid-area: item-9;
+}
+/*SETTING  ITEM AREAS END*/
 
 #nd-logo {
   font-weight: bold;
@@ -37,12 +67,18 @@ nav {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 50px;
   align-items: center;
   grid-row-gap: 80px;
-  margin-right: 20%;
-  margin-left: 20%;
+  padding-right: 20%;
+  padding-left: 20%;
+  grid-template-areas:
+    "item-1 item-1 item-1 item-2"
+    "item-3 item-3 item-3 item-3"
+    "item-4 item-5 item-5 item-5"
+    "item-6 item-6 item-6 item-7"
+    "item-9 item-8 item-8 item-8";
 }
 
 .footer-grid {
@@ -51,8 +87,7 @@ nav {
   display: grid;
   margin-left: 20%;
   margin-right: 20%;
-  grid-template-columns: 3fr 1fr;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-container > .item-1,
@@ -61,10 +96,6 @@ nav {
   right: 0;
   left: 0;
   padding-top: 50px;
-}
-
-#item-3 {
-  grid-column: 1/3;
 }
 
 #footer-social-icons {
@@ -86,8 +117,6 @@ nav {
 }
 
 .scroll-down {
-  grid-column-start: 1;
-  grid-column-end: 3;
   height: 50px;
   width: 30px;
   border: 2px solid black;
@@ -167,6 +196,14 @@ nav {
   color: white;
   font-size: 20px;
 }
+#footer-brand {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+#footer-social-icons {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
 
 #twitter,
 #instagram {
@@ -176,6 +213,18 @@ nav {
 @media (max-width: 575.98px) {
   .grid-container {
     grid-row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "item-1"
+      "item-2"
+      "item-3"
+      "item-5"
+      "item-4"
+      "item-6"
+      "item-7"
+      "item-8"
+      "item-9";
+    text-align: center;
   }
   .icon-bar {
     display: none;
@@ -184,27 +233,67 @@ nav {
     padding-top: 10px;
   }
   .item-2 {
-    padding-top: 0px;
+    padding-top: 23px;
   }
 
   .item-1,
   .item-2,
   .item-4,
-  .item-5 {
-    grid-column: 1/3;
+  .item-5,
+  #footer-brand,
+  #footer-social-icons {
     text-align: center;
   }
+  #footer-brand {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  #footer-social-icons {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
   .item-2,
-  .item-4 {
+  .item-4,
+  #footer-brand,
+  #footer-social-icons {
     margin-left: auto;
     margin-right: auto;
+  }
+  #footer-brand {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  #footer-social-icons {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 }
 
 /*Small(sm) size in Bootstrap*/
 @media (min-width: 576px) and (max-width: 767.98px) {
   .grid-container {
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "item-1"
+      "item-2"
+      "item-3"
+      "item-5"
+      "item-4"
+      "item-6"
+      "item-7"
+      "item-8"
+      "item-9";
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .grid-container {
     grid-row-gap: 10px;
+    grid-template-columns: 1fr;
+    margin-left: auto;
+    margin-right: auto;
   }
   .icon-bar {
     display: none;
@@ -215,17 +304,16 @@ nav {
   .item-2 {
     padding-top: 0px;
   }
-
-  .item-1,
-  .item-2,
-  .item-4 {
-    grid-column: 1/3;
-    text-align: center;
+  .item-3 {
+    margin-top: 30px;
   }
-  .item-2,
-  .item-4 {
-    margin-left: auto;
-    margin-right: auto;
+  #footer-brand {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  #footer-social-icons {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 }
 
@@ -239,4 +327,27 @@ nav {
 
 /*Extra Large size in Bootstrap*/
 @media (min-width: 1200px) {
+  .grid-container {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  nav {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .grid-container {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  nav {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .footer-grid {
+    margin-left: 25%;
+    margin-right: 25%;
+  }
 }
