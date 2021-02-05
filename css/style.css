@@ -9,6 +9,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   min-height: 100vh;
   display: grid;
@@ -19,32 +20,41 @@ body {
 .item-1 {
   grid-area: item-1;
 }
+
 .item-2 {
   grid-area: item-2;
 }
+
 .item-3,
 .scroll-down {
   grid-area: item-3;
 }
+
 .item-4 {
   grid-area: item-4;
 }
+
 .item-5 {
   grid-area: item-5;
 }
+
 .item-6 {
   grid-area: item-6;
 }
+
 .item-7 {
   grid-area: item-7;
 }
+
 .item-8 {
   grid-area: item-8;
 }
+
 .item-9 {
   grid-area: item-9;
   margin-bottom: 50px;
 }
+
 /*SETTING  ITEM AREAS END*/
 
 #nd-logo {
@@ -56,6 +66,16 @@ body {
 nav {
   margin-left: 9%;
   margin-right: 9%;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus,
+.navbar-toggler-icon{
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-color:#ffff;
 }
 
 .footer {
@@ -93,7 +113,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-container > .item-1,
+.grid-container>.item-1,
 .item-2 {
   font-family: "Poppins", sans-serif;
   right: 0;
@@ -182,6 +202,7 @@ nav {
 .typewriter-text {
   color: black;
 }
+
 .icon-bar {
   right: 0%;
   position: fixed;
@@ -199,10 +220,12 @@ nav {
   color: white;
   font-size: 20px;
 }
+
 #footer-brand {
   grid-column-start: 1;
   grid-column-end: 3;
 }
+
 #footer-social-icons {
   grid-column-start: 3;
   grid-column-end: 4;
@@ -212,6 +235,7 @@ nav {
 #instagram {
   width: 30px;
 }
+
 /*Extra-Small(xs) size in bootstrap*/
 @media (max-width: 575.98px) {
   .grid-container {
@@ -229,12 +253,15 @@ nav {
       "item-9";
     text-align: center;
   }
+
   .icon-bar {
     display: none;
   }
+
   .item-1 {
     padding-top: 10px;
   }
+
   .item-2 {
     padding-top: 23px;
   }
@@ -247,14 +274,17 @@ nav {
   #footer-social-icons {
     text-align: center;
   }
+
   #footer-brand {
     grid-column-start: 1;
     grid-column-end: 3;
   }
+
   #footer-social-icons {
     grid-column-start: 3;
     grid-column-end: 4;
   }
+
   .item-2,
   .item-4,
   #footer-brand,
@@ -262,10 +292,12 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+
   #footer-brand {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+
   #footer-social-icons {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -298,22 +330,28 @@ nav {
     margin-left: auto;
     margin-right: auto;
   }
+
   .icon-bar {
     display: none;
   }
+
   .item-1 {
     padding-top: 10px;
   }
+
   .item-2 {
     padding-top: 0px;
   }
+
   .item-3 {
     margin-top: 30px;
   }
+
   #footer-brand {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+
   #footer-social-icons {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -321,12 +359,10 @@ nav {
 }
 
 /*Medium(md) size in bootstrap*/
-@media (min-width: 768px) and (max-width: 991.98px) {
-}
+@media (min-width: 768px) and (max-width: 991.98px) {}
 
 /*Large(lg) size in Bootstrap*/
-@media (min-width: 992px) and (max-width: 1199.98px) {
-}
+@media (min-width: 992px) and (max-width: 1199.98px) {}
 
 /*Extra Large size in Bootstrap*/
 @media (min-width: 1200px) {
@@ -334,6 +370,7 @@ nav {
     padding-left: 25%;
     padding-right: 25%;
   }
+
   nav {
     margin-left: 20%;
     margin-right: 20%;
@@ -345,10 +382,12 @@ nav {
     padding-left: 30%;
     padding-right: 30%;
   }
+
   nav {
     margin-left: 25%;
     margin-right: 25%;
   }
+
   .footer-grid {
     margin-left: 25%;
     margin-right: 25%;
