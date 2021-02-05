@@ -14,6 +14,7 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
 /*SETTING  ITEM AREAS START*/
 .item-1 {
   grid-area: item-1;
