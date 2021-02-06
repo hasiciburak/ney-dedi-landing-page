@@ -15,6 +15,10 @@ body {
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+.item-1 > h1 {
+  font-size: 40;
+  font-weight: bold;
+}
 
 /*SETTING  ITEM AREAS START*/
 .item-1 {
@@ -71,11 +75,11 @@ nav {
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus,
-.navbar-toggler-icon{
+.navbar-toggler-icon {
   outline: none;
   box-shadow: none;
   border: none;
-  border-color:#ffff;
+  border-color: #ffff;
 }
 
 .footer {
@@ -113,7 +117,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-container>.item-1,
+.grid-container > .item-1,
 .item-2 {
   font-family: "Poppins", sans-serif;
   right: 0;
@@ -359,10 +363,12 @@ nav {
 }
 
 /*Medium(md) size in bootstrap*/
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
 
 /*Large(lg) size in Bootstrap*/
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
 
 /*Extra Large size in Bootstrap*/
 @media (min-width: 1200px) {
