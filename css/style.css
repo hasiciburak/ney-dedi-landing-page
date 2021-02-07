@@ -14,10 +14,35 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  background-color: #f5f9fc;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+/*Scrollbar design*/
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 12px;
 }
 
-.item-1>h1 {
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f95419;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f95419;
+}
+/*Scrollbar Design End*/
+
+.item-1 > h1 {
   font-size: 40;
   font-weight: bold;
 }
@@ -72,6 +97,29 @@ body {
 nav {
   margin-left: 9%;
   margin-right: 9%;
+}
+
+.sss a {
+  display: block;
+  color: #f95419;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #f95419;
+  border-radius: 50px;
+  list-style-type: none;
+  color: #f95419;
+  display: block;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+.sss:hover a {
+  color: #ffff;
+  background-color: #f95419;
+  text-decoration: none;
+  list-style-type: none;
+  transition: 0.2s ease-in-out;
 }
 
 .navbar-toggler:focus,
@@ -133,11 +181,32 @@ nav {
   background-color: #f5f5f5;
 }
 
-.item-10>h1 {
+.item-10 > h1 {
   font-size: 40px;
   margin-top: 60px;
 }
+.accordion {
+  margin-top: 50px;
+  width: 50%;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+}
+.accordion-body {
+  color: black;
+  overflow: auto;
+  height: 125px;
+}
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: white;
+}
 
+.accordion-button:focus {
+  border: none;
+}
 .footer-grid {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -147,7 +216,7 @@ nav {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid-container>.item-1,
+.grid-container > .item-1,
 .item-2 {
   font-family: "Poppins", sans-serif;
   right: 0;
@@ -349,6 +418,9 @@ nav {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+  .accordion {
+    width: 90%;
+  }
 }
 
 /*Small(sm) size in Bootstrap*/
@@ -403,7 +475,9 @@ nav {
   .item-3 {
     margin-top: 30px;
   }
-
+  .accordion {
+    width: 90%;
+  }
   #footer-brand {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -413,29 +487,36 @@ nav {
     grid-column-start: 1;
     grid-column-end: 4;
   }
+  .sss {
+    margin-left: 0;
+  }
 }
 
 /*Medium(md) size in bootstrap*/
-@media (min-width: 768px) and (max-width: 991.98px) {}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .accordion {
+    width: 80%;
+  }
+}
 
 /*Large(lg) size in Bootstrap*/
-@media (min-width: 992px) and (max-width: 1199.98px) {}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
 
 /*Extra Large size in Bootstrap*/
 @media (min-width: 1200px) and (max-width: 1599.98px) {
-
   .item-1,
   .item-4,
   .item-6,
   .item-9 {
-    padding-left: 30vw;
+    padding-left: 27.5vw;
   }
 
   .item-2,
   .item-5,
   .item-7,
   .item-8 {
-    padding-right: 30vw;
+    padding-right: 27.5vw;
   }
 
   .item-3 {
@@ -444,13 +525,12 @@ nav {
   }
 
   nav {
-    margin-left: 25vw;
-    margin-right: 25vw;
+    margin-left: 22.5vw;
+    margin-right: 22.5vw;
   }
 }
 
 @media (min-width: 1600px) {
-
   .item-1,
   .item-4,
   .item-6,
