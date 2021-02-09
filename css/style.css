@@ -85,7 +85,18 @@ body {
   grid-area: item-9;
   margin-bottom: 50px;
 }
-
+.features-left {
+  grid-area: features-left;
+}
+.features-image {
+  grid-area: features-image;
+}
+.features-right {
+  grid-area: features-right;
+}
+.big-header {
+  grid-area: big-header;
+}
 /*SETTING  ITEM AREAS END*/
 
 #nd-logo {
@@ -153,7 +164,22 @@ nav {
     "item-4 item-5 item-5 item-5"
     "item-6 item-6 item-6 item-7"
     "item-9 item-8 item-8 item-8"
+    "features-section features-section features-section features-section"
     "item-10 item-10 item-10 item-10";
+}
+
+.features-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "big-header big-header big-header"
+    "features-left features-image features-right";
+  align-items: center;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  grid-column-gap: 20px;
+  height: 50vh;
+  padding-bottom: 40px;
 }
 
 .item-1,
