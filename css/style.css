@@ -106,8 +106,8 @@ body {
 }
 
 nav {
-  margin-left: 9%;
-  margin-right: 9%;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 .sss a {
@@ -175,8 +175,6 @@ nav {
     "big-header big-header big-header"
     "features-left features-image features-right";
   align-items: center;
-  padding-left: 10vw;
-  padding-right: 10vw;
   height: 600px;
   padding-bottom: 40px;
 }
@@ -193,6 +191,9 @@ nav {
 .features-description-text {
   font-size: 14px;
 }
+.features-image > img {
+  width: 285px;
+}
 
 .item-1,
 .item-4,
@@ -200,10 +201,11 @@ nav {
 .item-9 {
   padding-left: 20vw;
 }
-
+.item-7 {
+  margin-left: auto;
+}
 .item-2,
 .item-5,
-.item-7,
 .item-8 {
   padding-right: 20vw;
 }
@@ -391,7 +393,9 @@ nav {
       "item-6"
       "item-7"
       "item-8"
-      "item-9";
+      "item-9"
+      "features-section"
+      "item-10";
     text-align: center;
   }
 
@@ -459,6 +463,27 @@ nav {
   .accordion {
     width: 90%;
   }
+  .features-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "big-header"
+      "features-left"
+      "features-image"
+      "features-right";
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1200px;
+    line-height: 1;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .features-image > img {
+    width: 200px;
+  }
+  .item-7 {
+    margin-left: 0;
+  }
 }
 
 /*Small(sm) size in Bootstrap*/
@@ -475,7 +500,9 @@ nav {
       "item-6"
       "item-7"
       "item-8"
-      "item-9";
+      "item-9"
+      "features-section"
+      "item-10";
   }
 
   .item-1,
@@ -490,7 +517,9 @@ nav {
     padding-right: 20vw;
     text-align: center;
   }
-
+  .item-7 {
+    margin-left: 0;
+  }
   .grid-container {
     grid-row-gap: 10px;
     grid-template-columns: 1fr;
@@ -528,6 +557,24 @@ nav {
   .sss {
     margin-left: 0;
   }
+  .features-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "big-header"
+      "features-left"
+      "features-image"
+      "features-right";
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 1200px;
+    line-height: 1;
+    margin-left: 10vw;
+    margin-right: 10vw;
+  }
+  .features-image > img {
+    width: 200px;
+  }
 }
 
 /*Medium(md) size in bootstrap*/
@@ -535,10 +582,63 @@ nav {
   .accordion {
     width: 80%;
   }
+
+  nav {
+    margin-left: 14vw;
+    margin-right: 14vw;
+  }
+
+  .item-1,
+  .item-4,
+  .item-6,
+  .item-9 {
+    padding-left: 14.5vw;
+  }
+  .features-section {
+    margin-left: 9vw;
+    margin-right: 9vw;
+  }
+  .item-2,
+  .item-5,
+  .item-7,
+  .item-8 {
+    padding-right: 14.5vw;
+  }
+
+  .item-3 {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /*Large(lg) size in Bootstrap*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  nav {
+    margin-left: 14vw;
+    margin-right: 14vw;
+  }
+
+  .item-1,
+  .item-4,
+  .item-6,
+  .item-9 {
+    padding-left: 16.5vw;
+  }
+  .features-section {
+    margin-left: 11vw;
+    margin-right: 11vw;
+  }
+  .item-2,
+  .item-5,
+  .item-7,
+  .item-8 {
+    padding-right: 16.5vw;
+  }
+
+  .item-3 {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 /*Extra Large size in Bootstrap*/
@@ -547,14 +647,17 @@ nav {
   .item-4,
   .item-6,
   .item-9 {
-    padding-left: 27.5vw;
+    padding-left: 17.5vw;
   }
-
+  .features-section {
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
   .item-2,
   .item-5,
   .item-7,
   .item-8 {
-    padding-right: 27.5vw;
+    padding-right: 17.5vw;
   }
 
   .item-3 {
@@ -563,8 +666,8 @@ nav {
   }
 
   nav {
-    margin-left: 22.5vw;
-    margin-right: 22.5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
   }
 }
 
@@ -596,5 +699,9 @@ nav {
   .footer-grid {
     margin-left: 25%;
     margin-right: 25%;
+  }
+  .features-section {
+    margin-left: 25vw;
+    margin-right: 25vw;
   }
 }
